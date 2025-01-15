@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler 
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from sklearn.metrics import mean_squared_error, mean_absolute_error, accuracy_score
 from sklearn.model_selection import train_test_split
@@ -18,15 +18,17 @@ def load_data(filepath):
     return data
 
 try:
-    df_temp = load_data("https://github.com/sreedharsiddhu/business-intillegence/blob/main/Temperature.csv")
-    df_insect = load_data("https://github.com/sreedharsiddhu/business-intillegence/blob/main/Insect_Caught.csv")
+    df_temp = load_data("https://raw.githubusercontent.com/sreedharsiddhu/business-intillegence/main/Temperature.csv")
+    df_insect = load_data("https://raw.githubusercontent.com/sreedharsiddhu/business-intillegence/main/Insect_Caught.csv")
+
 
 
 except urllib.error.URLError as e:
     import ssl
     ssl._create_default_https_context = ssl._create_unverified_context
-    df_temp = load_data("https://github.com/sreedharsiddhu/business-intillegence/blob/main/Temperature.csv")
-    df_insect = load_data("https://github.com/sreedharsiddhu/business-intillegence/blob/main/Insect_Caught.csv")
+    df_temp = load_data("https://raw.githubusercontent.com/sreedharsiddhu/business-intillegence/main/Temperature.csv")
+    df_insect = load_data("https://raw.githubusercontent.com/sreedharsiddhu/business-intillegence/main/Insect_Caught.csv")
+
 
 
 # Drop duplicates and null values
@@ -104,9 +106,9 @@ if page == menu[0]:
     st.title(menu[0])
     st.subheader("Santosh kumar Yadav")
     st.write("Matricola Number: D03000048")
-    st.subheader("Syed Najam Mehdi")
+    st.subheader("Sreedhar Rongala")
     st.write("Matricola Number: D03000049")
-    st.subheader("Pujan Thapa")
+    st.subheader("Faiz Hussain")
     st.write("Matricola Number: D03000046")
 
     
