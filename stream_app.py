@@ -17,7 +17,7 @@ def load_data(filepath):
     data = pd.read_csv(filepath)
     return data
 
-try:
+try:  
     df_temp = load_data("https://raw.githubusercontent.com/sreedharsiddhu/business-intillegence/main/Temperature.csv")
     df_insect = load_data("https://raw.githubusercontent.com/sreedharsiddhu/business-intillegence/main/Insect_Caught.csv")
 
